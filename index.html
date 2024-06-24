@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Wallpaper</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #your-element-selector {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .contacts {
+            position: relative;
+            background-color: rgba(128, 128, 128, 0.3); /* более прозрачная */
+            padding: 60px; /* еще больше padding для увеличения размера */
+            border-radius: 10px;
+            text-align: left; /* текст слева */
+            backdrop-filter: blur(10px); /* размытие фона */
+        }
+        .contacts a {
+            color: #d3d3d3; /* цвет 211, 211, 211 */
+            text-decoration: none;
+            font-size: 24px;
+            display: block;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .contacts a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="your-element-selector"></div>
+    <div class="contacts">
+        <a href="https://discord.gg/9JH5g3AA" target="_blank">Discord server</a>
+        <a href="https://t.me/+H1BmskWZPZ1iMmIy" target="_blank">Мой тгк 0w0</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta/dist/vanta.trunk.min.js"></script>
+    <script>
+        VANTA.TRUNK({
+            el: "#your-element-selector",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x8f70f2,
+            backgroundColor: 0x090909,
+            chaos: 10.00
+        })
+    </script>
+</body>
+</html>
